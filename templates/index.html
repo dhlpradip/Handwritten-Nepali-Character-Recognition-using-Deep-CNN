@@ -1,0 +1,39 @@
+{% extends "base.html" %} {% block content %}
+   <div class="container-fluid" id="background-div">
+	<center>
+
+		<div class="pt-4">
+			<div class="breadcrumb" id="heading-breadcrumb">
+				<span class="mx-auto" style="font-size: 26px;">
+					आफ्नो तस्बिर प्रविस्ट गर्नुहोस 
+				</span>
+	
+			</div>
+
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            हाल्नुहोस
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success btn-lg " id="btn-predict">चिन्नुहोस </button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h2 id="result">
+        <span> </span>
+    </h2>
+</div>
+
+{% endblock %}
